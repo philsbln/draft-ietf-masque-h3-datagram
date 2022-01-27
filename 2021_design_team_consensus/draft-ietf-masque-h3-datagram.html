@@ -1024,7 +1024,7 @@ svg [stroke="fill"], svg [fill^="#fff"] {
 </tr></thead>
 <tfoot><tr>
 <td class="left">Schinazi &amp; Pardue</td>
-<td class="center">Expires 29 July 2022</td>
+<td class="center">Expires 31 July 2022</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1037,12 +1037,12 @@ svg [stroke="fill"], svg [fill^="#fff"] {
 <dd class="internet-draft">draft-ietf-masque-h3-datagram-latest</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2022-01-25" class="published">25 January 2022</time>
+<time datetime="2022-01-27" class="published">27 January 2022</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Standards Track</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2022-07-29">29 July 2022</time></dd>
+<dd class="expires"><time datetime="2022-07-31">31 July 2022</time></dd>
 <dt class="label-authors">Authors:</dt>
 <dd class="authors">
 <div class="author">
@@ -1097,7 +1097,7 @@ versions of HTTP.<a href="#section-abstract-1" class="pilcrow">¶</a></p>
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 29 July 2022.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 31 July 2022.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1426,13 +1426,15 @@ Capsule Type field.<a href="#section-4.1-4.6.1" class="pilcrow">¶</a></p>
 </dd>
         <dd class="break"></dd>
 </dl>
-<p id="section-4.1-5">Capsules MUST be forwarded unmodified by intermediaries, with the exception of
-the DATAGRAM capsule; see <a href="#datagram-capsule" class="xref">Section 4.3</a>. An intermediary can identify the
-use of the capsule protocol either through the presence of the Capsule-Protocol
-header field (<a href="#hdr" class="xref">Section 4.2</a>) or by understanding the chosen HTTP Upgrade token. An
-intermediary that identifies the use of the capsule protocol MAY convert between
-DATAGRAM capsules and QUIC DATAGRAM frames when forwarding. Definitions of new
-Capsule Types MAY specify optional custom intermediary processing.<a href="#section-4.1-5" class="pilcrow">¶</a></p>
+<p id="section-4.1-5">Because new protocols or extensions may involve defining new capsule types,
+intermediaries that wish to allow for future extensibility SHOULD forward
+capsules unmodified. One exception to this rule is the DATAGRAM capsule; see
+<a href="#datagram-capsule" class="xref">Section 4.3</a>. An intermediary can identify the use of the capsule
+protocol either through the presence of the Capsule-Protocol header field
+(<a href="#hdr" class="xref">Section 4.2</a>) or by understanding the chosen HTTP Upgrade token. An intermediary
+that identifies the use of the capsule protocol MAY convert between DATAGRAM
+capsules and QUIC DATAGRAM frames when forwarding. Definitions of new Capsule
+Types MAY specify optional custom intermediary processing.<a href="#section-4.1-5" class="pilcrow">¶</a></p>
 <p id="section-4.1-6">Endpoints which receive a Capsule with an unknown Capsule Type MUST silently
 drop that Capsule.<a href="#section-4.1-6" class="pilcrow">¶</a></p>
 <p id="section-4.1-7">By virtue of the definition of the data stream, the Capsule Protocol is not in
