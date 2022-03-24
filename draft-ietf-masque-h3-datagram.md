@@ -86,10 +86,11 @@ When running over HTTP/2, demultiplexing is provided by the HTTP/2 framing
 layer, but unreliable delivery is unavailable. HTTP Datagrams are negotiated
 and conveyed using the Capsule Protocol; see {{datagram-capsule}}.
 
-When running over HTTP/1, requests are strictly serialized in the connection,
-and therefore demultiplexing is not available. Unreliable delivery is likewise
-not available. HTTP Datagrams are negotiated and conveyed using the Capsule
-Protocol; see {{datagram-capsule}}.
+When running over HTTP/1, upgrading the connection to convay HTTP datagrams
+prevents other uses of the connection and, therefore, multiplexing with
+other requests is not possible. Unreliable delivery is likewise not available.
+HTTP Datagrams are negotiated and conveyed using the Capsule Protocol;
+see {{datagram-capsule}}.
 
 
 ## HTTP/3 Datagrams {#format}
